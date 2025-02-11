@@ -19,7 +19,7 @@ function Safaris() {
         </div>
         <div>
           <FaList/>
-          <button>Add Safari<FaPlus/></button>
+          <button><FaPlus/></button>
         </div>
       </div>
       <div className="container">  
