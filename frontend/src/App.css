@@ -354,7 +354,7 @@ header .header2 .burger svg {
 }
 @media screen and (max-width: 480px) {
   .safaris .container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 .safaris .container .wrapper {
@@ -363,33 +363,45 @@ header .header2 .burger svg {
   place-items: center;
   justify-content: center;
   position: relative;
+  height: 300px;
+  width: 400px;
 }
 @media screen and (max-width: 480px) {
   .safaris .container .wrapper {
     width: 100%;
   }
 }
-.safaris .container .wrapper h1 {
-  position: absolute;
-  color: white;
-}
 .safaris .container .wrapper a {
-  width: 100%;
+  height: 100%;
 }
 .safaris .container .wrapper a img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  cursor: pointer;
+  inset: 0;
 }
 .safaris .container .wrapper .info {
   bottom: 0;
   width: 100%;
   color: black;
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
 }
-.safaris .container .wrapper .info .wrapper2 {
+.safaris .container .wrapper .info div {
   padding: 10px;
+}
+.safaris .container .wrapper .info span {
+  background-color: #ff7e5f;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.safaris .container .wrapper .info span:hover {
   background-color: #feb47b;
 }
 .safaris .container .active {

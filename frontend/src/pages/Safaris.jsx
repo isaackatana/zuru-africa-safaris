@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import SafariList from './SafariList';
-import { FaFilter, FaSearch } from 'react-icons/fa';
+import { FaFilter, FaList, FaPlus, FaSearch } from 'react-icons/fa';
 import Blog from './Blog';
 
 function Safaris() {
@@ -18,7 +18,8 @@ function Safaris() {
           <div><FaSearch/></div>
         </div>
         <div>
-          <FaFilter/>
+          <FaList/>
+          <button>Add Safari<FaPlus/></button>
         </div>
       </div>
       <div className="container">  

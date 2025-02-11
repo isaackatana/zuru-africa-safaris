@@ -441,7 +441,7 @@ header {
         gap: 10px;
 
         @include respond-to(mobile) {
-            flex-direction: column;
+            grid-template-columns: 1fr;
         }
 
         .wrapper {
@@ -450,23 +450,21 @@ header {
             place-items: center;
             justify-content: center;
             position: relative;
+            height: 300px;
+            width: 400px;
 
             @include respond-to(mobile) {
                 width: 100%;
             }
 
-            h1 {
-                position: absolute;
-                color: white;
-            }
-
             a {
-                width: 100%;
+                height: 100%;
+
                 img {
                     width: 100%;
-                    height: 200px;
+                    height: 100%;
                     object-fit: cover;
-                    cursor: pointer;
+                    inset: 0;
                 }
             }
 
@@ -474,10 +472,29 @@ header {
                 bottom: 0;
                 width: 100%;
                 color: black;
+                position: absolute;
+                bottom: 0;
+                background-color: rgba(255, 255, 255, 0.6);
+                display: flex;
+                flex-direction: column;
 
-                .wrapper2 {
+                div {
                     padding: 10px;
-                    background-color: #feb47b;
+                }
+
+                span {
+                    background-color: #ff7e5f;
+                    padding: 10px;
+                    display: flex;
+                    justify-content: space-between;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #feb47b;
+                    }
+
+                    svg {
+                    }
                 }
             }
         }
