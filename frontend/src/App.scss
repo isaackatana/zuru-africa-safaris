@@ -401,37 +401,21 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        margin-bottom: 10px;
+
+        .filter-list {
+            svg {
+                font-size: 20px;
+            }
+        }
         
-        .search-bar {
+        button {
+            width: 30px;
+            height: 30px;
             display: flex;
             align-items: center;
-            margin-bottom: 10px;
-            gap: 5px;
-            
-            input {
-                padding: 10px;
-                border-radius: 5px;
-                border: none;
-                background-color: #feb47b;
-            }
-    
-            div {
-                background-color: #ff7e5f;
-                display: flex;
-                justify-content: center;
-                padding: 10px;
-                border-radius: 5px;
-                cursor: pointer;
-    
-                &:hover {
-                    background-color: black;
-                }
-    
-                svg {
-                    cursor: pointer;
-                    color: white;
-                }
-            }
+            justify-content: center;
+            cursor: pointer;
         }
     }
 

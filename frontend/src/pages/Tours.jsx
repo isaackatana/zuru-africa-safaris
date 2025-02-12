@@ -8,11 +8,7 @@ function Tours() {
     <Helmet>
         <title>Juels | Tours</title>
     </Helmet>
-    <div className="tours">
-      <div className="search-bar">
-          <input type="text" placeholder='Search Tours'/>
-          <div><FaSearch/></div>
-        </div>      
+    <div className="tours">    
     </div>
     </>
   )

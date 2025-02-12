@@ -13,14 +13,10 @@ function Safaris() {
     </Helmet>
     <div className="safaris">
       <div className='filter-wrapper'>
-        <div className="search-bar" >
-          <input type="text" placeholder='Search Safari'/>
-          <div><FaSearch/></div>
-        </div>
-        <div>
-          <FaList/>
+          <div className="filter-list">
+            <FaList/>
+          </div>
           <button><FaPlus/></button>
-        </div>
       </div>
       <div className="container">  
         <SafariList/>

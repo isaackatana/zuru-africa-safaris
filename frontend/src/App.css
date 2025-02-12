@@ -319,33 +319,18 @@ header .header2 .burger svg {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 10px;
 }
-.safaris .filter-wrapper .search-bar {
+.safaris .filter-wrapper .filter-list svg {
+  font-size: 20px;
+}
+.safaris .filter-wrapper button {
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
-  gap: 5px;
-}
-.safaris .filter-wrapper .search-bar input {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: #feb47b;
-}
-.safaris .filter-wrapper .search-bar div {
-  background-color: #ff7e5f;
-  display: flex;
   justify-content: center;
-  padding: 10px;
-  border-radius: 5px;
   cursor: pointer;
-}
-.safaris .filter-wrapper .search-bar div:hover {
-  background-color: black;
-}
-.safaris .filter-wrapper .search-bar div svg {
-  cursor: pointer;
-  color: white;
 }
 .safaris .container {
   display: grid;

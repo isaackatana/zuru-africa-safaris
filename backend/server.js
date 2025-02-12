@@ -7,7 +7,7 @@ const authRoutes = require('./routes/auth');
 require('dotenv').config();
 const safariRoutes = require('./routes/safariRoutes');
 
-const DB_URI = process.env.DB_URI || 'mongodb+srv://mrisaackatana:Iyez8cyhuBFFXCaf@zuruafricasafaris.w0zr6.mongodb.net/?retryWrites=true&w=majority&appName=ZuruAfricaSafaris' 
+const DB_URI = process.env.DB_URI
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -25,7 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Database Connection
-mongoose.connect(DB_URI, {
+mongoose.connect('mongodb+srv://mrisaackatana:Iyez8cyhuBFFXCaf@zuruafricasafaris.w0zr6.mongodb.net/?retryWrites=true&w=majority&appName=ZuruAfricaSafaris', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
