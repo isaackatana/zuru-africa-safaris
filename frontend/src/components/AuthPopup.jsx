@@ -1,6 +1,7 @@
 // AuthPopup.jsx
 
 import React, { useState } from 'react';
+import { FaXmark } from 'react-icons/fa6';
 
 const AuthPopup = ({ onClose, onLoginSuccess }) => {
   const [isLogin, setIsLogin] = useState(true);
@@ -33,7 +34,7 @@ const AuthPopup = ({ onClose, onLoginSuccess }) => {
   return (
     <div className="overlay" onClick={onClose}>
       <div className="popup" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={onClose}>&times;</button>
+        <button className="close-button" onClick={onClose}><FaXmark/></button>
         <h2>{isLogin ? 'Login' : 'Register'}</h2>
         <form onSubmit={handleSubmit}>
           {!isLogin && (

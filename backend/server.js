@@ -1,5 +1,7 @@
 // server.js
 
+const router = express.Router();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');

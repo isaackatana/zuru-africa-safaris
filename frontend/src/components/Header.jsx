@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { FaBars, FaEnvelope, FaFacebook, FaInstagram, FaPhone, FaUser } from 'react-icons/fa'
-import { FaXTwitter } from 'react-icons/fa6'
+import { FaXmark, FaXTwitter } from 'react-icons/fa6'
 import { Link, NavLink } from 'react-router-dom'
 import AuthPopup from './AuthPopup';
 
@@ -73,7 +73,9 @@ function Header() {
               {isAuthPopupOpen && <AuthPopup onClose={() => setAuthPopupOpen(false)} onLoginSuccess={handleLoginSuccess} />}
             </div>
             <div className="burger">
-              <FaBars/>
+              
+                <FaBars/>
+                <FaXmark/>
             </div>
         </nav>
       </div>

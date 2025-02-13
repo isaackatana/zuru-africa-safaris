@@ -356,6 +356,13 @@ header .header2 .burger svg {
     width: 100%;
   }
 }
+.safaris .container .wrapper .location-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: x-large;
+  color: white;
+}
 .safaris .container .wrapper a {
   height: 100%;
 }
@@ -372,7 +379,6 @@ header .header2 .burger svg {
   color: black;
   position: absolute;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   flex-direction: column;
 }
@@ -380,14 +386,16 @@ header .header2 .burger svg {
   padding: 10px;
 }
 .safaris .container .wrapper .info span {
-  background-color: #ff7e5f;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   cursor: pointer;
 }
-.safaris .container .wrapper .info span:hover {
-  background-color: #feb47b;
+.safaris .container .wrapper .info span h2 {
+  color: white;
+}
+.safaris .container .wrapper .info .bio {
+  background-color: rgba(255, 255, 255, 0.6);
 }
 .safaris .container .active {
   opacity: 1;
@@ -407,12 +415,20 @@ header .header2 .burger svg {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 80%;
+  position: relative;
 }
 @media screen and (max-width: 480px) {
   .safari-detail .wrapper {
     width: 100%;
     grid-template-columns: 1fr;
   }
+}
+.safari-detail .wrapper .location-arrow {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  font-size: x-large;
 }
 .safari-detail .wrapper img {
   width: 100%;
@@ -421,12 +437,6 @@ header .header2 .burger svg {
 .safari-detail .wrapper .info {
   background-color: #feb47b;
   padding: 20px;
-}
-.safari-detail .wrapper .info h1 {
-  margin-bottom: 10px;
-}
-.safari-detail .wrapper .info h2 {
-  margin: 10px 0 10px;
 }
 .safari-detail .wrapper .info form {
   display: flex;
