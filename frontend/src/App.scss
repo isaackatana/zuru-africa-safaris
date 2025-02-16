@@ -100,17 +100,16 @@ header {
             align-items: center;
             gap: 5px;
 
-            ul {
+            .nav-links {
                 display: flex;
 
                 @include respond-to(mobile){
-                    display: flex;
                     position: fixed;
                     flex-direction: column;
                     top: 106px;
-                    right: 0;
                     width: 50%;
                     background-color: #ff7e5f;
+                    z-index: 1;
                 }
 
                 a {
@@ -126,12 +125,6 @@ header {
                     }
 
                     @include respond-to(mobile) {
-                    }
-                    
-                    @include respond-to(tablet) {
-                    }
-                    
-                    @include respond-to(desktop) {
                     }
                 }
 
@@ -178,6 +171,14 @@ header {
                     }
                     
                 }
+            }
+            .inactive {
+                transform: translateX(100%);
+            }
+    
+            .active {
+                transform: translateX(0%);
+
             }
 
             .user-login {

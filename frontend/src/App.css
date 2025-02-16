@@ -72,21 +72,20 @@ header .header2 nav {
   align-items: center;
   gap: 5px;
 }
-header .header2 nav ul {
+header .header2 nav .nav-links {
   display: flex;
 }
 @media screen and (max-width: 480px) {
-  header .header2 nav ul {
-    display: flex;
+  header .header2 nav .nav-links {
     position: fixed;
     flex-direction: column;
     top: 106px;
-    right: 0;
     width: 50%;
     background-color: #ff7e5f;
+    z-index: 1;
   }
 }
-header .header2 nav ul a {
+header .header2 nav .nav-links a {
   list-style: none;
   color: black;
   text-decoration: none;
@@ -94,18 +93,18 @@ header .header2 nav ul a {
   padding: 7.5px 20px;
   transition: 0.3s;
 }
-header .header2 nav ul a:hover {
+header .header2 nav .nav-links a:hover {
   background-color: #ff7e5f;
 }
-header .header2 nav ul .active {
+header .header2 nav .nav-links .active {
   background-color: #ff7e5f;
 }
-header .header2 nav ul .has-submenu {
+header .header2 nav .nav-links .has-submenu {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-header .header2 nav ul .has-submenu ul {
+header .header2 nav .nav-links .has-submenu ul {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -120,19 +119,25 @@ header .header2 nav ul .has-submenu ul {
   transition-timing-function: ease-in-out;
   transition: 0.3s;
 }
-header .header2 nav ul .has-submenu ul a {
+header .header2 nav .nav-links .has-submenu ul a {
   cursor: pointer;
   background-color: #feb47b;
 }
-header .header2 nav ul .has-submenu ul a:hover {
+header .header2 nav .nav-links .has-submenu ul a:hover {
   background-color: #ff7e5f;
 }
-header .header2 nav ul .has-submenu:hover ul {
+header .header2 nav .nav-links .has-submenu:hover ul {
   display: flex;
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
   left: -1rem;
+}
+header .header2 nav .inactive {
+  transform: translateX(100%);
+}
+header .header2 nav .active {
+  transform: translateX(0%);
 }
 header .header2 nav .user-login {
   display: flex;

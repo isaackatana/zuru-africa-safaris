@@ -21,6 +21,14 @@ function Header() {
     setIsLoggedIn(false);
   };
 
+  //Handle Menu
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header>
       <div className="header1">
@@ -37,7 +45,7 @@ function Header() {
       <div className="header2">    
         <Link to='/'><div className="logo">ZATS</div></Link>
         <nav>
-            <ul>
+            <ul className={`nav-links ${isMenuOpen ? 'active' : 'inactive'}`}>
                 <NavLink to="/">Home</NavLink>
                 <div className="has-submenu">
                   <NavLink to="/tours">Tours</NavLink>
@@ -73,9 +81,7 @@ function Header() {
               {isAuthPopupOpen && <AuthPopup onClose={() => setAuthPopupOpen(false)} onLoginSuccess={handleLoginSuccess} />}
             </div>
             <div className="burger">
-              
-                <FaBars/>
-                <FaXmark/>
+             {isMenuOpen ? <FaXmark onClick={toggleMenu}/> : <FaBars onClick={toggleMenu}/>}
             </div>
         </nav>
       </div>

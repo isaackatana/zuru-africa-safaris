@@ -46,7 +46,6 @@ const AuthPopup = ({ onClose, onLoginSuccess }) => {
               onChange={handleInputChange}
               required
             />
-            
           )}
           <input
             type="email"
