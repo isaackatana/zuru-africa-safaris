@@ -16,7 +16,7 @@ function SafariDetail() {
             <div className="info">
                 <h2>name</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugiat pariatur ratione doloKre nisi ut. Porro, </p>
-                <h2>Price: Ksh. {}</h2>
+                <h2>Ksh. {}</h2>
                 <form action="submit">
                   <div className="user-info">
                     <div className="names">
