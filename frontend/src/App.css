@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Bubblegum Sans", sans-serif;
+  font-family: "cabin", sans-serif;
 }
 
 body {
@@ -75,6 +75,17 @@ header .header2 nav {
 header .header2 nav ul {
   display: flex;
 }
+@media screen and (max-width: 480px) {
+  header .header2 nav ul {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 106px;
+    right: 0;
+    width: 50%;
+    background-color: #ff7e5f;
+  }
+}
 header .header2 nav ul a {
   list-style: none;
   color: black;
@@ -85,11 +96,6 @@ header .header2 nav ul a {
 }
 header .header2 nav ul a:hover {
   background-color: #ff7e5f;
-}
-@media screen and (max-width: 480px) {
-  header .header2 nav ul a {
-    display: none;
-  }
 }
 header .header2 nav ul .active {
   background-color: #ff7e5f;
@@ -356,13 +362,6 @@ header .header2 .burger svg {
     width: 100%;
   }
 }
-.safaris .container .wrapper .location-arrow {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: x-large;
-  color: white;
-}
 .safaris .container .wrapper a {
   height: 100%;
 }
@@ -372,6 +371,13 @@ header .header2 .burger svg {
   -o-object-fit: cover;
      object-fit: cover;
   inset: 0;
+}
+.safaris .container .wrapper .location-arrow {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: x-large;
+  color: white;
 }
 .safaris .container .wrapper .info {
   bottom: 0;

@@ -20,7 +20,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Bubblegum Sans", sans-serif;
+    font-family: "cabin", sans-serif;
 }
 
 body {
@@ -103,6 +103,16 @@ header {
             ul {
                 display: flex;
 
+                @include respond-to(mobile){
+                    display: flex;
+                    position: fixed;
+                    flex-direction: column;
+                    top: 106px;
+                    right: 0;
+                    width: 50%;
+                    background-color: #ff7e5f;
+                }
+
                 a {
                     list-style: none;
                     color: black;
@@ -116,7 +126,6 @@ header {
                     }
 
                     @include respond-to(mobile) {
-                        display: none;
                     }
                     
                     @include respond-to(tablet) {
@@ -441,14 +450,6 @@ header {
                 width: 100%;
             }
 
-            .location-arrow {
-                position: absolute;
-                top: 20px;
-                right: 20px;
-                font-size: x-large;
-                color: white;
-            }
-
             a {
                 height: 100%;
 
@@ -458,6 +459,14 @@ header {
                     object-fit: cover;
                     inset: 0;
                 }
+            }
+
+            .location-arrow {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                font-size: x-large;
+                color: white;
             }
 
             .info {
@@ -535,7 +544,7 @@ header {
         .info {
             background-color: #feb47b;
             padding: 20px;
-            
+
             form {
                 display: flex;
                 gap: 10px;

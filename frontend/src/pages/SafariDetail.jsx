@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Blog from './Blog';
 import { FaLocationArrow } from 'react-icons/fa';
+import { FaLocationDot } from 'react-icons/fa6';
 
 function SafariDetail() {
   
@@ -9,7 +10,7 @@ function SafariDetail() {
     <div className="safari-detail">
         <div className="wrapper">
             <div className="location-arrow">
-              <FaLocationArrow/>Diani Beach, Ukunda
+              <FaLocationDot/>Diani Beach, Ukunda
             </div>
             <img src='https://kenyaincentivessafaris.com/wp-content/uploads/2023/09/Mombasa-Beach-safari-1024x513.jpg' alt="" />
             <div className="info">

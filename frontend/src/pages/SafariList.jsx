@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaArrowAltCircleRight, FaBook, FaCaretRight, FaLocationArrow } from 'react-icons/fa'
+import { FaLocationDot } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
 function SafariList() {
@@ -11,7 +12,7 @@ function SafariList() {
         <img src="https://kenyaincentivessafaris.com/wp-content/uploads/2023/09/Mombasa-Beach-safari-1024x513.jpg" alt="" />
         </Link>
         <div className='location-arrow'>
-          <FaLocationArrow/> Diani Beach, Ukunda
+          <FaLocationDot/> Diani Beach, Ukunda
         </div>
         <div className="info">
           <span><h2>From 300$</h2> </span>
