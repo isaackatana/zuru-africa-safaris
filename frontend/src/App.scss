@@ -417,7 +417,15 @@ header {
         justify-content: space-between;
         margin-bottom: 10px;
 
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
         .filter-list {
+            display: flex;
+            align-items: center;
             cursor: pointer;
             
                 svg {
@@ -458,6 +466,26 @@ header {
 
             @include respond-to(mobile) {
                 width: 100%;
+            }
+
+            .carousel {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                opacity: 1;
+                transition: opacity 1s ease-in-out;
+                display: flex;
+
+                .carousel-slide {
+                    opacity: 0;
+                    width: 100%;
+                }
+
+                .active {
+                    opacity: 1;
+                }
             }
 
             a {
@@ -521,16 +549,52 @@ header {
 .safari-detail {
     padding: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
 
     @include respond-to(mobile) {
         padding: 10px;
+        
+    }
+
+    .filter-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .filter-list {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            
+                svg {
+                    font-size: 20px;
+                }
+        }
+        
+        button {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            background-color: #ff7e5f;
+            border: none;
+            border-radius: 5px;
+        }
     }
 
     .wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 80%;
         position: relative;
 
         @include respond-to(mobile) {
@@ -622,6 +686,7 @@ header {
                 }
             }
         }
+
     }
 }
 

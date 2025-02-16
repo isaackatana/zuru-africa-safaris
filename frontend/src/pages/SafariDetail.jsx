@@ -1,13 +1,25 @@
 import { useState } from 'react';
 import Blog from './Blog';
-import { FaLocationArrow } from 'react-icons/fa';
+import { FaArrowLeft, FaList, FaLocationArrow, FaPlus } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 function SafariDetail() {
   
   return (
     <>
     <div className="safari-detail">
+      <div className='filter-wrapper'>
+        <Link to='/safaris'>
+          <FaArrowLeft/>
+        </Link>
+        <nav>
+          <div className="filter-list">
+            <FaList/>
+          </div>
+          <button><FaPlus/></button>
+        </nav>
+      </div>
         <div className="wrapper">
             <div className="location-arrow">
               <FaLocationDot/>Diani Beach, Ukunda
