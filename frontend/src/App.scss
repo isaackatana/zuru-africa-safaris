@@ -102,6 +102,7 @@ header {
 
             .nav-links {
                 display: flex;
+                transition: 0.3s ease-in-out;
 
                 @include respond-to(mobile){
                     position: fixed;
@@ -110,6 +111,15 @@ header {
                     width: 50%;
                     background-color: #ff7e5f;
                     z-index: 1;
+                    height: 100vh;
+
+                    &.inactive {
+                        transform: translateX(100%);
+                    }
+            
+                    &.active {
+                        transform: translateX(0%);
+                    }
                 }
 
                 a {
@@ -172,14 +182,8 @@ header {
                     
                 }
             }
-            .inactive {
-                transform: translateX(100%);
-            }
-    
-            .active {
-                transform: translateX(0%);
 
-            }
+            
 
             .user-login {
                 display: flex;
@@ -414,9 +418,11 @@ header {
         margin-bottom: 10px;
 
         .filter-list {
-            svg {
-                font-size: 20px;
-            }
+            cursor: pointer;
+            
+                svg {
+                    font-size: 20px;
+                }
         }
         
         button {
@@ -426,6 +432,9 @@ header {
             align-items: center;
             justify-content: center;
             cursor: pointer;
+            background-color: #ff7e5f;
+            border: none;
+            border-radius: 5px;
         }
     }
 

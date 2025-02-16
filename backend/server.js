@@ -3,7 +3,6 @@ const app = express();
 const router = express.Router();
 require('dotenv').config();
 const cors = require('cors');
-
 const mongoose = require('mongoose');
 const DB_URI = process.env.DB_URI || 'mongodb+srv://mrisaackatana:Iyez8cyhuBFFXCaf@zuruafricasafaris.w0zr6.mongodb.net/?retryWrites=true&w=majority&appName=ZuruAfricaSafaris'
 

@@ -74,6 +74,7 @@ header .header2 nav {
 }
 header .header2 nav .nav-links {
   display: flex;
+  transition: 0.3s ease-in-out;
 }
 @media screen and (max-width: 480px) {
   header .header2 nav .nav-links {
@@ -83,6 +84,13 @@ header .header2 nav .nav-links {
     width: 50%;
     background-color: #ff7e5f;
     z-index: 1;
+    height: 100vh;
+  }
+  header .header2 nav .nav-links.inactive {
+    transform: translateX(100%);
+  }
+  header .header2 nav .nav-links.active {
+    transform: translateX(0%);
   }
 }
 header .header2 nav .nav-links a {
@@ -132,12 +140,6 @@ header .header2 nav .nav-links .has-submenu:hover ul {
   visibility: visible;
   transform: translateX(0);
   left: -1rem;
-}
-header .header2 nav .inactive {
-  transform: translateX(100%);
-}
-header .header2 nav .active {
-  transform: translateX(0%);
 }
 header .header2 nav .user-login {
   display: flex;
@@ -332,6 +334,9 @@ header .header2 .burger svg {
   justify-content: space-between;
   margin-bottom: 10px;
 }
+.safaris .filter-wrapper .filter-list {
+  cursor: pointer;
+}
 .safaris .filter-wrapper .filter-list svg {
   font-size: 20px;
 }
@@ -342,6 +347,9 @@ header .header2 .burger svg {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color: #ff7e5f;
+  border: none;
+  border-radius: 5px;
 }
 .safaris .container {
   display: grid;

@@ -15,7 +15,7 @@ function SafariList() {
           <FaLocationDot/> Diani Beach, Ukunda
         </div>
         <div className="info">
-          <span><h2>From 300$</h2> </span>
+          <span><h2>4 Left - 300$</h2> </span>
           <div className='bio'>
             <h3>Name</h3>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam deleniti eligendi modi iste?</p>

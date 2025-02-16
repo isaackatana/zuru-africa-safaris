@@ -1,4 +1,5 @@
-const safari = require('../models/safari.js')
+const safari = require('../models/Safari')
+
 // Controller methods
 exports.getAllSafaris = (req, res) => {
   res.json(safaris);
